@@ -1,31 +1,26 @@
-let heroi = ["Felipe" , "Luan" , "Fernanda" , "Nathan" , "Fernando"]
-let xp = 110000
-let nivel = ""
+let heroi = ["Felipe" , "Luan" , "Fernanda" , "Nathan" , "helio" , "Barbara" , "Rex"]
+let xp = [1000, 1001, 2000, 2001, 5000, 5001, 7000, 7001, 8000, 8001, 9000, 9001, 10000, 10001]
+let nivel = ["Ferro", "Bronze", "Prata", "Ouro", "Platina", "Ascendente", "Imortal", "Radiante"]
+
 for(let i = 0; i < heroi.length; i++){
-        if (xp < 1000) {
-            nivel = "Ferro"
-        } else if (xp <= 2000) {
-            nivel = "Bronze"
-        } else if (xp <= 5000) {
-            nivel = "Prata"
-        } else if (xp <= 7000) {
-            nivel = "Ouro"
-        } else if (xp <= 8000) {
-            nivel = "Platina"
-        } else if (xp <= 9000) {
-            nivel = "Ascendente"
-        } else if (xp <= 10000) {
-            nivel = "Imortal"
-        } else {
-            nivel = "Radiante"
+    for(let j = 0; j < xp.length; j++){
+        if(nivel < 1000){
+            xp = "Ferro"
+        }else if(nivel === 1001 || nivel === 2000){
+            xp = "bronze"
+        }else if(nivel === 2001 || nivel === 5000){
+            xp = "Prata"
+        }else if(nivel === 5001 || nivel === 7000){
+            xp = "Ouro"
+        }else if(nivel === 7001 || nivel === 8000){
+            xp = "Platina"
+        }else if(nivel === 8001 || nivel === 9000){
+            xp = "Ascendente"
+        }else if(nivel === 9001 || nivel === 10000){
+            xp = "Imortal"
+        }else if(nivel === 10001){
+            xp = "Radiante"
         }
-console.log("O Herói " + heroi[i] + " está no nível de "  + nivel);
+    }
+    console.log("O heroi " + heroi[i] + " e esta no nivel " + xp[j])
 }
-
-
-/*let heroi = ["Rafael", "Pietro", "Ana", "Paula", "Julia", "Mateus"];
-
-for (let i = 0; i < heroi.length; i++) {
-    console.log("O heroi " + heroi[i])
-}
-*/
