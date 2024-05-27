@@ -1,26 +1,27 @@
-let heroi = ["Felipe" , "Luan" , "Fernanda" , "Nathan" , "helio" , "Barbara" , "Rex"]
-let xp = [1000, 1001, 2000, 2001, 5000, 5001, 7000, 7001, 8000, 8001, 9000, 9001, 10000, 10001]
-let nivel = ["Ferro", "Bronze", "Prata", "Ouro", "Platina", "Ascendente", "Imortal", "Radiante"]
+let heroi = ["Felipe", "Luan", "Fernanda", "Nathan", "Helio", "Barbara", "Rex"];
+let xp = [1000, 1001, 2000, 2001, 5000, 5001, 7000, 7001, 8000, 8001, 9000, 9001, 10000, 10001];
+let nivel = ["Ferro", "Bronze", "Prata", "Ouro", "Platina", "Ascendente", "Imortal", "Radiante"];
 
-for(let i = 0; i < heroi.length; i++){
-    for(let j = 0; j < xp.length; j++){
-        if(nivel < 1000){
-            xp = "Ferro"
-        }else if(nivel === 1001 || nivel === 2000){
-            xp = "bronze"
-        }else if(nivel === 2001 || nivel === 5000){
-            xp = "Prata"
-        }else if(nivel === 5001 || nivel === 7000){
-            xp = "Ouro"
-        }else if(nivel === 7001 || nivel === 8000){
-            xp = "Platina"
-        }else if(nivel === 8001 || nivel === 9000){
-            xp = "Ascendente"
-        }else if(nivel === 9001 || nivel === 10000){
-            xp = "Imortal"
-        }else if(nivel === 10001){
-            xp = "Radiante"
+for (let i = 0; i < heroi.length; i++) {
+    let nivelAtual;
+    for (let j = 0; j < xp.length; j++) {
+        if (xp[j] < 1000) {
+            nivelAtual = nivel[0];
+        } else if (xp[j] >= 1000 && xp[j] <= 2000) {
+            nivelAtual = nivel[1];
+        } else if (xp[j] > 2000 && xp[j] <= 5000) {
+            nivelAtual = nivel[2];
+        } else if (xp[j] > 5000 && xp[j] <= 7000) {
+            nivelAtual = nivel[3];
+        } else if (xp[j] > 7000 && xp[j] <= 8000) {
+            nivelAtual = nivel[4];
+        } else if (xp[j] > 8000 && xp[j] <= 9000) {
+            nivelAtual = nivel[5];
+        } else if (xp[j] > 9000 && xp[j] <= 10000) {
+            nivelAtual = nivel[6];
+        } else if (xp[j] > 10000) {
+            nivelAtual = nivel[7];
         }
     }
-    console.log("O heroi " + heroi[i] + " e esta no nivel " + xp[j])
+    console.log("O heroi " + heroi[i] + " está no nível " + nivelAtual);
 }
